@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zero To One ($ZTO). A plain community token on Ethereum. One billion tokens, no fees, no minting after launch, no owner powers, no transfer rules." />
+    <meta name="theme-color" content="#111110" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Zero To One — $ZTO</title>
+    <script>
+      try {
+        const saved = localStorage.getItem('zto-theme');
+        document.documentElement.dataset.theme = saved === 'light' || saved === 'dark'
+          ? saved : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      } catch {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-B07d3ldy.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-sC6YPd1t.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This page needs JavaScript to display its details. Zero To One ($ZTO) is a plain community token on Ethereum. Contract: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e. <a href="https://etherscan.io/token/0xd782bdea4ef02a0bd391eb9089470c8080f0a68e">View the token on Etherscan</a>.</noscript>
+  </body>
+</html>
