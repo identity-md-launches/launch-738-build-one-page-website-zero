@@ -66,7 +66,7 @@ button:disabled { cursor: wait; }
 .wordmark-divider { color: var(--color-border); font-weight: 400; }
 .wordmark-symbol { color: var(--color-accent); font-weight: 400; }
 nav { display: flex; gap: var(--space-4); }
-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: var(--text-label); color: var(--color-muted); }
+nav a { display: inline-flex; align-items: center; min-width: 24px; min-height: 44px; text-decoration: none; font-size: var(--text-label); color: var(--color-muted); }
 .theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-1); min-height: 44px; padding: 0.5rem 0.75rem; background: transparent; color: var(--color-text); border: 1px solid var(--color-control-border); font-size: var(--text-label); }
 .skip-link { position: absolute; inset-block-start: 1rem; inset-inline-start: 1rem; padding: 0.75rem 1rem; background: var(--color-accent); color: var(--color-on-accent); z-index: 2; transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
@@ -154,7 +154,7 @@ button:active { background: var(--color-hover); }
 @media (max-width: 44rem) {
   .site-shell { padding-inline: var(--space-3); }
   .site-header { min-height: 5rem; flex-wrap: wrap; gap: 0.25rem var(--space-2); padding-block: var(--space-2); }
-  .site-header nav { order: 3; width: 100%; justify-content: space-between; gap: var(--space-2); }
+  .site-header nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 0 var(--space-1); }
   .hero { padding-block: var(--space-3) var(--space-5); }
   .hero-meta { font-size: 0.75rem; }
   .hero-mark { padding-block: var(--space-4) var(--space-2); }

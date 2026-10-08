@@ -93,12 +93,20 @@ function Contract() {
 }
 
 function App() {
+  useEffect(() => {
+    // Cross-page header links arrive before React has rendered the section IDs.
+    const section = window.location.hash.slice(1);
+    if (['token', 'supply', 'origin'].includes(section)) {
+      document.getElementById(section)?.scrollIntoView();
+    }
+  }, []);
+
   return <>
     <a className="skip-link" href="#main">skip to content</a>
     <div className="site-shell">
       <header className="site-header">
         <a className="wordmark" href="#" aria-label="Zero To One ($ZTO) home"><span>$ZTO</span><span className="wordmark-divider" aria-hidden="true">/</span><span className="wordmark-symbol" aria-hidden="true">0 → 1</span></a>
-        <nav aria-label="main navigation"><a href="#token">the token</a><a href="#supply">the split</a><a href="#origin">the origin</a></nav>
+        <nav aria-label="main navigation"><a href="#token">the token</a><a href="#supply">the split</a><a href="#origin">the origin</a><a href="/buy/">Buy</a></nav>
         <ThemeToggle />
       </header>
 
